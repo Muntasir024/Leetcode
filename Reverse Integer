@@ -1,0 +1,12 @@
+class Solution {
+public:
+    int reverse(int x) {
+        long n = 0;
+        while(x) {
+            n = (x % 10) + (n * 10);
+            x /= 10;
+        }
+        if(n < -2147483648 | n > 2147483647) return 0;
+        else                                 return n;
+    }
+};
